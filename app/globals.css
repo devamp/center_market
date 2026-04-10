@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   /* Base colors */
@@ -6,9 +6,9 @@
   --foreground: #2b2b2b;
 
   /* Brand colors (from logo) */
-  --primary: #7a1f2b;   /* burgundy */
+  --primary: #7a1f2b; /* burgundy */
   --secondary: #1f7a4d; /* green */
-  --accent: #e9dccf;    /* beige */
+  --accent: #e9dccf; /* beige */
 
   /* UI colors */
   --card: #ffffff;
