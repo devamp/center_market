@@ -10,7 +10,7 @@ type CardData = {
 
 const cards: CardData[] = [
   {
-    image: '/hot_foods.png',
+    image: '/foods/biryani.png',
     title: 'Chicken Biryani',
     description:
       'Slow-cooked rice, tender chicken, and bold spices in every bite.',
@@ -18,7 +18,7 @@ const cards: CardData[] = [
     accent: 'from $11.99',
   },
   {
-    image: '/hot_foods.png',
+    image: '/foods/paneer.png',
     title: 'Paneer Butter Masala',
     description:
       'Creamy tomato curry with soft paneer and a rich, comforting finish.',
@@ -26,7 +26,7 @@ const cards: CardData[] = [
     accent: 'Crowd Pick',
   },
   {
-    image: '/hot_foods.png',
+    image: '/foods/stir_fry.png',
     title: 'Veggie Stir Fry',
     description:
       'Fresh vegetables tossed in a savory glaze for a lighter, vibrant meal.',
@@ -34,7 +34,7 @@ const cards: CardData[] = [
     accent: 'Ready Fast',
   },
   {
-    image: '/hot_foods.png',
+    image: '/foods/lava_cake.png',
     title: 'Chocolate Lava Cake',
     description:
       'Warm chocolate cake with a molten center that finishes any order well.',
@@ -63,12 +63,13 @@ const Card = ({ cardData }: { cardData: CardData }) => {
 
       <div className="flex flex-1 flex-col px-5 py-5">
         <div className="flex items-start justify-between gap-4">
-          <h3 className="text-xl font-bold tracking-tight text-foreground">
+          <h3 className="text-lg font-bold tracking-tight text-foreground">
             {cardData.title}
           </h3>
-          <span className="rounded-full bg-secondary/10 px-3 py-1 text-xs font-semibold text-secondary">
-            {cardData.accent}
-          </span>
+        </div>
+
+        <div className="rounded-full bg-secondary/10 px-3 py-1 text-xs font-semibold text-secondary w-fit">
+          {cardData.accent}
         </div>
 
         <p className="mt-3 text-sm leading-6 text-slate-600">
@@ -79,8 +80,8 @@ const Card = ({ cardData }: { cardData: CardData }) => {
           <p className="text-sm font-medium text-slate-500">
             Freshly prepared daily
           </p>
-          <button className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-secondary">
-            View item
+          <button className="inline-flex items-center ml-2 justify-center rounded-full bg-primary px-3 py-2 text-xs font-semibold text-white transition hover:bg-secondary">
+            View more
           </button>
         </div>
       </div>
@@ -90,7 +91,10 @@ const Card = ({ cardData }: { cardData: CardData }) => {
 
 const CardCarousel = () => {
   return (
-    <section className="relative overflow-hidden px-4 py-10 sm:px-6 lg:px-8">
+    <section
+      id="food"
+      className="relative scroll-mt-24 overflow-hidden px-4 py-10 sm:px-6 lg:px-8"
+    >
       <div className="absolute left-0 top-10 h-36 w-36 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute bottom-0 right-8 h-44 w-44 rounded-full bg-secondary/10 blur-3xl" />
 

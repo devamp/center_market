@@ -2,7 +2,10 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white/90 p-6 shadow-sm ring-1 ring-slate-200 sm:p-8 md:p-12">
+    <section
+      id="deals"
+      className="relative scroll-mt-24 overflow-hidden bg-white/90 p-6 shadow-sm ring-1 ring-slate-200 sm:p-8 md:p-12"
+    >
       <div className="mx-auto flex max-w-7xl flex-col gap-10 lg:flex-row lg:items-center">
         <div className="flex-1 text-center lg:text-left">
           <p className="mb-4 inline-flex rounded-full bg-secondary/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.22em] text-secondary">
@@ -31,7 +34,7 @@ export default function Hero() {
               <span>Order with DoorDash</span>
             </a>
             <a
-              href="#"
+              href="#contact"
               className="inline-flex w-full text-black items-center justify-center rounded-full border border-slate-300  px-6 py-3 text-sm font-semibold transition hover:border-slate-400 hover:bg-secondary-500 sm:w-auto"
             >
               Location & Hours
